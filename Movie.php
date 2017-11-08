@@ -7,7 +7,7 @@ Class Movie
     public $duration;
     public $releaseDate;
     
-    function __construct($Name, $Desc,$Duration,$Release)
+    public function __construct($Name,$Desc,$Duration,$Release)
     {
         $this->name = $Name;   
         $this->description = $Desc; 
@@ -15,7 +15,49 @@ Class Movie
         $this->releaseDate = $Release; 
     }
     
-    function seeMovie($Movie)
+    public function getName()
+    {
+        return $this->name;    
+    }
+    
+    public function setName($Name = "")
+    {
+        $this->name =$name;    
+    }
+        
+    public function setDesc($Desc = "")
+    {
+        $this->description = $Desc;    
+    }
+    
+    public function getDesc()
+    {
+        return $this->description;    
+    }
+    
+    
+    public function setDuration($Duration = "")
+    {
+        $this->duration =$Duration;    
+    }
+    
+    public function getDuration()
+    {
+        return $this->duration;    
+    }
+    
+    public function setRelease($Release = "")
+    {
+        $this->releaseDate =$Release;    
+    }
+    
+        public function getRelease()
+    {
+        return $this->release;    
+    }
+
+    
+    public function seeMovie($Movie)
     {
         print 'nom : '.$this->name.'<br>';
         print 'description : '.$this->description.'<br>';
